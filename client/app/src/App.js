@@ -1,21 +1,47 @@
-import './App.css';
 import { VideoRoom } from './components/VideoRoom';
 // import {useState} from React
-import {useState, React, useRef} from 'react';
+import { useState, React, useRef } from 'react';
+import './App.css';
+import Star from './components/Star';
+import Login from './components/Login';
+
+import Header from './components/Header';
 
 function App() {
-  const [joined, setJoined] = useState(false);
-  return (
-  <div className="App">
-    <h1>WDJ Virtual Call</h1>
-    {!joined && (
-      <button onClick={() => setJoined(true)}>Join Room</button>
+    const [joined, setJoined] = useState(false);
 
-    )}
+    const [login, setLogin] = useState(false);
 
-    {joined && <VideoRoom />}
-  </div>
-  );
+    const handleLogin = () => {
+        setLogin(true);
+    };
+
+    return (
+
+        <div className="App">
+
+            <Header />
+
+            <div className='content'>
+
+                {!login && (
+                    <Login onLogin={handleLogin} />
+                )}
+
+                {!joined && login && (
+                    <button onClick={() => setJoined(true)}>Watch Survillence</button>
+
+                )}
+
+                {joined && <VideoRoom />}
+            </div>
+
+            <Star height="60vh" bottom="0" right="400px" />
+
+            <Star height="55vh" bottom="250px" right="-550px" rotate="-130" />
+
+        </div>
+    );
 }
 
 export default App;

@@ -6,6 +6,32 @@ import time
 
 from flask import Flask, request, jsonify
 
+import requests
+import json
+
+firebase_config = {
+    "apiKey": "AIzaSyA5_6MeslRHd-zTd2xiqYKUpsajf4GmxQY",
+    "authDomain": "uofthacks11-3aaad.firebaseapp.com",
+    "projectId": "uofthacks11-3aaad",
+    "storageBucket": "uofthacks11-3aaad.appspot.com",
+    "messagingSenderId": "638732020721",
+    "appId": "1:638732020721:web:69cdc8ef8d4f6f2d953250"
+}
+
+db_url = 'https://uofthacks11-3aaad-default-rtdb.firebaseio.com/'
+
+def get_data():
+    url = db_url + '/expression.json'
+    response = requests.get(url)
+    return response.json()
+
+def post_data(data):
+    url = db_url + '/expression.json'
+    response = requests.put(url, data=json.dumps(data))
+    return response.json()
+
+
+
 ports = serial.tools.list_ports.comports()
 serialInst = serial.Serial()
 
@@ -59,7 +85,8 @@ def servo():
     
     return jsonify(request.json)
 
-
-# ser.close()
-
-
+@app.route('/get_emotion', methods=['GET'])
+def emotion():
+    data = get_data()
+    print(data)
+    return jsonify(data)

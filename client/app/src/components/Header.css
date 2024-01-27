@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Genty Regular';
+    src: url('../../public/fonts/Genty-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3% 0 3%;
+    height: 8vh;
+    background-color: #FFF8DC;
+    border: 1px solid #A83E26;
+    z-index: 10;
+}
+
+.label {
+    font-family: 'Genty Regular';
+    align-items: center;
+    font-size: 2em;
+    color: #A83E26;
+    text-decoration: none;
+}
+
+.profile {
+    height: 50px;
+    border: 1px solid #A83E26;
+    background-color: #FFF0C9;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    width: 10%;
+    display: flex;
+    border-radius: 29px;
+    justify-content: center;
+}
