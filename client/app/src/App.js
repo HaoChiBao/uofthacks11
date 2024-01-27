@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { VideoRoom } from './components/VideoRoom';
+// import {useState} from React
+import {useState, React, useRef} from 'react';
 
 function App() {
+  const [joined, setJoined] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className="App">
+    <h1>WDJ Virtual Call</h1>
+    {!joined && (
+      <button onClick={() => setJoined(true)}>Join Room</button>
+
+    )}
+
+    {joined && <VideoRoom />}
+  </div>
   );
 }
 
