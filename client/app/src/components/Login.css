@@ -4,7 +4,7 @@
     color: #B83353;
     font-family: Migra;
     font-weight: 800;
-    font-size: 62.27px;
+    font-size: 50.27px;
     padding: 10px 50px;
     width: 50vw;
     border-radius: 66.1px;
@@ -13,7 +13,7 @@
     align-items: center;
     z-index: 1;
     position: fixed;
-    bottom: 80px;
+    bottom: 100px;
 
 }
 
@@ -34,6 +34,25 @@
     object-fit: cover;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 80vh;
     z-index: 0;
+}
+
+.login-text {
+    background-color: #FFF8DC;
+    border: 1px solid #A83E26;
+    color: #B83353;
+    font-family: Migra;
+    font-weight: 800;
+    font-size: 50.27px;
+    padding: 10px 50px;
+    width: 50vw;
+    border-radius: 66.1px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+    bottom: 200px;
+
 }

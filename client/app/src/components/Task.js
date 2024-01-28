@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import './Task.css';
 const Task = () => {
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState('');
@@ -40,22 +41,23 @@ const Task = () => {
 
             <div>
                 <input
+                    className='add-task'
                     type="text"
                     value={newTask}
                     onChange={(e) => setNewTask(e.target.value)}
                     placeholder="Manually add a new task"
                 />
-                <button onClick={addTask}>Add Task</button>
+                <button className='task' onClick={addTask}>Add Task</button>
             </div>
-            <div>
+            {/* <div>
                 <input
                     type="text"
                     value={newTask}
                     onChange={(e) => setNewTask(e.target.value)} // this should actually call the task function
                     placeholder="feeling sluggish? input a topic, and let Furby whip up some tasks for you!"
                 />
-                <button onClick={addTask}>Add Task</button>
-            </div>
+                <button className='task' onClick={addTask}>Add Task</button>
+            </div> */}
         </div>
     );
 };

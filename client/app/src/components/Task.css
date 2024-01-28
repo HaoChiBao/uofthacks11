@@ -1,0 +1,18 @@
+button {
+    background-color: #FFF8DC;
+    border: 1px solid #A83E26;
+    color: #B83353;
+    font-family: Migra;
+    font-weight: 800;
+    font-size: 20px;
+    padding: 2%;
+    width: 10vw;
+    border-radius: 66.1px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+
+}
+
+.add-task {}
