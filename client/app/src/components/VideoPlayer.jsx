@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 
 import './VideoPlayer.css';
 
-export const VideoPlayer = ({ user }) => {
+export const VideoPlayer = ({ user, zIndex }) => {
 
     const ref = useRef();
 
@@ -14,7 +14,7 @@ export const VideoPlayer = ({ user }) => {
         <div className='video-player'>
             <div
                 ref={ref}
-                style={{ width: '40vw', height: '44vh', borderRadius: '50px' }}
+                style={{ width: '32vw', height: '40vh', borderRadius: '50px', zIndex: zIndex }}
             ></div>
         </div>
     )

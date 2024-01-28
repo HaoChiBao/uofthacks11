@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./Dashboard.css";
+import Chat from "./Chat";
 
-import Task from "./Task.js";
 import { VideoRoom } from './VideoRoom';
 
 const eventsList = [
@@ -16,26 +16,28 @@ export default function Dashboard2({ token }) {
     return (
         <div className="over-arch">
             <div className="col1">
+
                 <h1>Furby's Dashcam</h1>
 
                 <VideoRoom />
 
-                <div>
-                    <h1>Spotify Player</h1>
-                    <div className="content-box">
-
+                <div className="controls">
+                    <button className="left">left</button>
+                    <div className="vertical">
+                        <button className="up">up</button>
+                        <button className="down">down</button>
                     </div>
+                    <button className="right">right</button>
                 </div>
 
             </div>
             <div className="col2">
                 <div>
-                    <h1>Your Upcoming Events</h1>
+                    <h1>Chat With Furby</h1>
+
+                    <Chat />
                 </div>
-                <div>
-                    <h1>Furby's Memos</h1>
-                    <Task />
-                </div>
+
             </div>
 
         </div>

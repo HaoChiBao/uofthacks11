@@ -1,13 +1,7 @@
 import * as React from "react";
 import "./Dashboard.css";
+import Chat from "./Chat";
 
-import Task from "./Task.js";
-const eventsList = [
-    { title: "Western Voice!", date: "2024-02-03", description: "CSA's Flagship Event" },
-    { title: "Art Exhibition", date: "2024-03-15", description: "Explore diverse art pieces from local artists" },
-    { title: "Food Festival", date: "2024-04-01", description: "A culinary adventure with delicious cuisines" },
-    // Add more events as needed
-];
 
 
 export default function Dashboard({ token }) {
@@ -26,20 +20,31 @@ export default function Dashboard({ token }) {
 
                 </div>
                 <div>
-                    <h1>Spotify Player</h1>
-                    <div className="content-box">
+                    <h1>Furby's Favourite Jams</h1>
 
-                    </div>
+                    <iframe
+                        style={{ borderRadius: '12px', border: 'none' }}
+                        src="https://open.spotify.com/embed/playlist/1WlOv6eswLOHWXIiBzYGu4?utm_source=generator"
+                        width="100%"
+                        height="180px"
+                        border="none"
+                        background-color="transparent"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                    ></iframe>
+
                 </div>
 
             </div>
             <div className="col2">
                 <div>
-                    <h1>Your Upcoming Events</h1>
+                    <h1>Chat With Furby</h1>
+
+                    <Chat />
                 </div>
                 <div>
-                    <h1>Furby's Memos</h1>
-                    <Task />
+
                 </div>
             </div>
 

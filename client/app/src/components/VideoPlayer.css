@@ -4,6 +4,7 @@
     justify-content: left;
     border-radius: 50px;
     /* overflow: hidden; */
+    position: absolute;
 }
 
 

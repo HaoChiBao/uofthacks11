@@ -53,7 +53,6 @@ export const VideoRoom = () => {
                 ]);
                 client.publish(tracks);
             });
-
         return () => {
             for (let localTrack of localTracks) {
                 localTrack.stop();
@@ -74,9 +73,10 @@ export const VideoRoom = () => {
                     gridTemplateColumns: 'repeat(2, 200px)',
                 }}
             >
-                {users.map((user) => (
-                    <VideoPlayer key={user.vid} user={user} />
+                {users.map((user, i) => (
+                    <VideoPlayer key={user.vid} user={user} zIndex={-i} />
                 ))}
+                {/* <VideoPlayer key={users[0].vid} user={users[0]} /> */}
             </div>
         </div>
     );

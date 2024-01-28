@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "agora-rtc-sdk-ng": "^4.20.0",
+    "cohere-ai": "^7.7.3",
     "fs": "^0.0.1-security",
     "gapi": "^0.0.3",
     "gapi-script": "^1.2.0",
