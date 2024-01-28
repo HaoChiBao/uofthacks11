@@ -1,0 +1,10 @@
+.video-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    border-radius: 50px;
+    /* overflow: hidden; */
+}
+
+
+.video-player video {}

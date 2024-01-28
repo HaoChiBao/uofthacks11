@@ -6,6 +6,7 @@ import Star from './components/Star';
 import Login from './components/Login';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';
+import Dashboard2 from './components/Dashboard2';
 
 function App() {
     const [joined, setJoined] = useState(false);
@@ -33,7 +34,7 @@ function App() {
                     </>
                 )}
 
-                {joined && <VideoRoom />}
+                {joined && <Dashboard2 />}
 
             </div>
 

@@ -1,6 +1,8 @@
-import React, {useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 
-export const VideoPlayer = ({user}) => {
+import './VideoPlayer.css';
+
+export const VideoPlayer = ({ user }) => {
 
     const ref = useRef();
 
@@ -9,11 +11,10 @@ export const VideoPlayer = ({user}) => {
     }, []);
 
     return (
-        <div>
-            Uid: {user.uid}
-            <div 
+        <div className='video-player'>
+            <div
                 ref={ref}
-                style={{width: '200px', height: '200px'}}
+                style={{ width: '40vw', height: '44vh', borderRadius: '50px' }}
             ></div>
         </div>
     )
